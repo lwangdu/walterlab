@@ -1,0 +1,423 @@
+/*
+ Theme Name:   Walter Lab (GeneratePress Child)
+ Template:     generatepress
+ Version:      1.0.1
+*/
+
+/* 1) Global body/typography */
+body {
+  background-color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
+}
+
+.wl-screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 2) Primary menu styling */
+.main-navigation a,
+#site-navigation a,
+.menu-primary-container a,
+.wp-block-navigation a {
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+}
+
+.site-header {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+/* 3) Global container settings */
+.inside-header,
+.footer-widgets-container,
+.grid-container,
+.entry-content,
+.entry-content-lab-member,
+#memberPublications {
+  width: 100%;
+  max-width: 1200px; /* change to 850px where appropriate */
+  margin: 0 auto;
+}
+
+.footer-widgets-container {
+	padding-top: 60px;
+  	padding-right: auto;
+  	padding-bottom: 60px;
+  	padding-left: auto;
+}
+
+/* If you want specific containers at 850px instead of 1200px: */
+.entry-content,
+.entry-content-lab-member,
+#memberPublications {
+  max-width: 850px;
+  
+}
+
+/* 4) Headings */
+.entry-title {
+  font-size: 30px;
+  font-weight: 700;
+  max-width: 100%; /* so it never overflows its parent */
+}
+
+.site-content{
+	max-width: 850px;
+	margin-top: 30px;
+}
+.search-input{
+	margin-bottom: 20px;
+}
+
+#main {
+	max-width: 850px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0 0 10px;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+/* 6) Remove post meta where needed */
+article.post footer.entry-meta,
+.entry-meta,
+.single-post .entry-meta {
+  display: none;
+}
+
+/* 7) Image captions */
+.imageCaption {
+  color: #777;
+  font-size: 0.7em;
+}
+
+/* 8) Tables—strip borders and ensure spacing */
+table, td, th {
+  border: 0 !important;
+}
+td {
+  border-bottom: 1px solid #c7c7c7 !important;
+  border-top: 1px solid #c7c7c7 !important;
+  padding: 10px !important;
+}
+
+/* 9) Form elements (fluid width) */
+input, select, textarea {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+}
+
+/* 10) Research pages */
+#researchPageHeader {
+  margin-bottom: 20px;
+}
+#researchPageHeader img {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#researchPageHeader div {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* 11) Publication Single styling */
+.citationBlock {
+  margin-bottom: 20px;
+  border: 1px solid #F1F1F1;
+  background-color: #F6F6F6;
+  padding: 20px;
+}
+
+/* 12) Publications List */
+.publications ul {
+  list-style: none !important;
+  padding-left: 0;
+  margin-left: 0;
+}
+.publications li {
+  margin-bottom: 20px;
+  padding-left: 0 !important;
+}
+.publications a,
+.public a:visited {
+  color: #3d6393;
+}
+.idUnavailable {
+  color: #333;
+}
+
+/* 13) Lab member grid (already responsive) */
+.labMembers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.labMemberBlock img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+
+.labMemberCardLink {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.labMemberCardLink:visited {
+  color: inherit;
+}
+
+.labMemberCardLink:focus-visible {
+  outline: 3px solid #3d6393;
+  outline-offset: 4px;
+}
+
+.labMemberCardLink:hover .labMemberName,
+.labMemberCardLink:focus-visible .labMemberName {
+  text-decoration: underline;
+}
+
+.labMemberBlock .labMemberName {
+  font-size: 1.2em !important;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+.labMemberBlock .labMemberType {
+  font-size: 1em;
+}
+.labMemberTimespan {
+  font-size: 0.8em;
+  color: #666;
+}
+
+/* 14) Single member view */
+.member-photo {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.member-photo img {
+  padding: 5px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+.member-photo h4 {
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.member-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.member-section-title {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.member-publications-list {
+  margin: 0 0 1.5em 1.25em;
+}
+
+.member-publications-list li {
+  margin-bottom: 0.75em;
+}
+
+.labmemberblock::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.members-spacer {
+  clear: both;
+  height: 30px;
+}
+
+#membersNoPhotos {
+  display: block;
+  clear: both;
+  width: 100%;
+  float: none;
+  margin-top: 20px;
+}
+
+#membersNoPhotos .labMemberName {
+  font-size: 1.2em !important;
+  font-weight: 600;
+}
+
+#membersNoPhotos .labMemberName:not(:first-child) {
+  margin-top: 20px;
+}
+
+
+.entry-content-lab-member table {
+  width: 100% !important;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+}
+
+.entry-content-lab-member td,
+.entry-content-lab-member th {
+  width: auto !important;
+  padding: 0.75rem 0.875rem !important;
+  vertical-align: top;
+}
+
+.entry-content-lab-member tr:first-child td,
+.entry-content-lab-member tr:first-child th {
+  border-top: 1px solid #c7c7c7 !important;
+}
+
+.entry-content-lab-member td:first-child,
+.entry-content-lab-member th:first-child {
+  width: 7.5rem !important;
+  font-weight: 600;
+  color: #555;
+}
+
+/* 15) Sidebar/content wrappers */
+.separate-containers.right-sidebar .site-main {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .separate-containers .site-main,
+  .separate-containers .widget-area {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .entry-content-lab-member td:first-child,
+  .entry-content-lab-member th:first-child {
+    width: auto !important;
+  }
+}
+
+/* 16) Responsive breakpoints for the labMembers grid */
+@media (max-width: 768px) {
+  .labMembers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .labMembers {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------
+   Responsive wrapping for Footer First links
+   Targeting #block-10 (your widget_block)
+   -------------------------------------------- */
+   
+@media (max-width: 600px) {
+  /* 1) Allow the flex container to wrap */
+  #block-10 .is-layout-flex {
+    flex-wrap: wrap !important;
+    justify-content: center; /* center links once wrapped */
+  }
+
+  /* 2) Give each <p> a percentage width so two can sit side by side
+       (change to 100% if you want each link on its own “row”) */
+  #block-10 .is-layout-flex > p {
+    width: 50%;
+    box-sizing: border-box;
+    margin: 0;           /* remove any default margins */
+    padding: 8px 0;      /* vertical padding for tap targets */
+    text-align: center;  /* center each link */
+  }
+
+  /* 3) Ensure <a> fills its parent <p> for easy tapping */
+  #block-10 .is-layout-flex > p > a {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+.site-info {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.site-info a {
+  display: inline-block;
+  word-break: break-word;
+  text-decoration: underline;
+}
+
+/* Optional: Stack the entire line on very small screens */
+@media (max-width: 400px) {
+  .site-info {
+    flex-direction: column;
+    align-items: center;
+  }
+}
