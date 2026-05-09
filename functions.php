@@ -64,14 +64,14 @@ function walterlab_accessible_publication_markup( $html, $publication_title = ''
             $attributes = $matches[1];
             $link_text  = trim( wp_strip_all_tags( $matches[2] ) );
 
-            if ( preg_match( '/\baria-label\s*=/i', $attributes ) ) {
-                return $matches[0];
-            }
-
             $label = '';
+            $visible_text = $matches[2];
+            $extra_attributes = '';
 
             if ( preg_match( '/^PDF$/i', $link_text ) ) {
-                $label = sprintf( 'PDF for %s', $title_context );
+                $label = sprintf( 'Download PDF for %s', $title_context );
+                $visible_text = 'Download PDF';
+                $extra_attributes .= ' type="application/pdf"';
             } elseif ( preg_match( '/^PMID\b/i', $link_text ) ) {
                 $label = sprintf( '%s for %s', $link_text, $title_context );
             } elseif ( preg_match( '/^PMCID\b/i', $link_text ) ) {
@@ -83,10 +83,12 @@ function walterlab_accessible_publication_markup( $html, $publication_title = ''
             }
 
             return sprintf(
-                '<a%s aria-label="%s">%s</a>',
+                '<a%s%s aria-label="%s" title="%s">%s</a>',
                 $attributes,
+                $extra_attributes,
                 esc_attr( $label ),
-                $matches[2]
+                esc_attr( $label ),
+                $visible_text
             );
         },
         $html
