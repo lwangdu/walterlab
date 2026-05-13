@@ -80,6 +80,10 @@ body {
 	margin-bottom: 20px;
 }
 
+.search-input #search_input {
+  max-width: 350px;
+}
+
 #main {
 	max-width: 850px;
   margin-left: 10px;
