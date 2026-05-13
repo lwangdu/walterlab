@@ -135,9 +135,11 @@ article.post footer.entry-meta,
 }
 
 /* 7) Image captions */
-.imageCaption {
-  color: #777;
-  font-size: 0.7em;
+.imageCaption,
+.wp-element-caption,
+figcaption {
+  color: #000;
+  font-size: 10px !important;;
 }
 
 /* 8) Tables—strip borders and ensure spacing */

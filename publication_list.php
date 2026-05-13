@@ -60,7 +60,6 @@ do_action( 'generate_sidebar_template' );
             $pubShowDate = get_field( 'pub_show_date' );
             $pmid        = get_field( 'pmid' );
             $pmcid       = get_field( 'pmcid' );
-            $pdfURL      = get_field( 'pub_pdf' );
 
             // generate the citation HTML
             $citation = wl_publication_citation(
@@ -75,7 +74,7 @@ do_action( 'generate_sidebar_template' );
               $url,
               $pmid,
               $pmcid,
-              $pdfURL
+              ''
             );
             $citation = walterlab_accessible_publication_markup( $citation, get_the_title() );
             ?>

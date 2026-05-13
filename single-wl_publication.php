@@ -29,7 +29,6 @@ do_action('generate_sidebar_template');
       $pubShowDate = get_field('pub_show_date');
       $pmid        = get_field('pmid');
       $pmcid       = get_field('pmcid');
-      $pdfURL      = get_field('pub_pdf');
 
       // – Build raw citation via helper
       $allMemberInfoArr = wl_publication_build_member_list();
@@ -45,7 +44,7 @@ do_action('generate_sidebar_template');
         '',
         $pmid,
         $pmcid,
-        $pdfURL
+        ''
       );
       $citation = walterlab_accessible_publication_markup( $citation, $title );
 
